@@ -8,3 +8,20 @@ before_install:
 
 script: 
         - docker run rohan/docker-react-2 npm run test -- --coverage
+
+deploy:
+        provider: elasticbeanstalk
+        region: ap-south-1
+        app: docker-react-2
+        env: "DockerReact2-env"
+        bucket_name: "elasticbeanstalk-ap-south-1-506195770656"
+        docker_path: "docker-react-2"
+
+        on:
+                branch: master
+
+        access_key_id: "$AWS_ACCESS_KEY"
+        secret_access_key:
+                secure: "$AWS_SECRET_KEY"    
+
+
