@@ -14,10 +14,10 @@ deploy:
         region: ap-south-1
         app: $docker-react-2
         env: $DockerReact2-env
-        bucket: chef01
-        skip_cleanup: true
-        local_dir: build
-        docker_path: "docker-react-2"
+        bucket: 'chef01'
+       
+     
+    
 
         on:
                 branch: master
