@@ -12,9 +12,11 @@ script:
 deploy:
         provider: s3
         region: ap-south-1
-        app: docker-react-2
-        env: "DockerReact2-env"
-        bucket: "chef01"
+        app: $docker-react-2
+        env: $DockerReact2-env
+        bucket: chef01
+        skip_cleanup: true
+        local_dir: build
         docker_path: "docker-react-2"
 
         on:
