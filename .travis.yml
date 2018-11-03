@@ -14,7 +14,7 @@ deploy:
         region: ap-south-1
         app: docker-react-2
         env: "DockerReact2-env"
-        buckek: "elasticbeanstalk-ap-south-1-506195770656"
+        bucket: "chef01"
         docker_path: "docker-react-2"
 
         on:
